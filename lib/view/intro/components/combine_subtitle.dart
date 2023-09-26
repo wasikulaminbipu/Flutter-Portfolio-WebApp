@@ -13,67 +13,67 @@ class CombineSubtitleText extends StatelessWidget {
       children: [
         const Responsive(
           desktop: AnimatedSubtitleText(
-              start: 30, end: 40, text: 'Flutter '),
+              start: 30, end: 40, text: 'Veterinary Doctor & '),
           largeMobile: AnimatedSubtitleText(
-              start: 30, end: 25, text: 'Flutter '),
+              start: 30, end: 25, text: 'Veterinary Doctor & '),
           mobile: AnimatedSubtitleText(
-              start: 25, end: 20, text: 'Flutter '),
+              start: 25, end: 20, text: 'Veterinary Doctor & '),
           tablet: AnimatedSubtitleText(
-              start: 40, end: 30, text: 'Flutter '),
+              start: 40, end: 30, text: 'Veterinary Doctor & '),
         ),
         (kIsWeb && Responsive.isLargeMobile(context)
             ? const Responsive(
-          desktop: AnimatedSubtitleText(
-              start: 30,
-              end: 40,
-              text: 'Developer ',
-              gradient: true),
-          largeMobile: AnimatedSubtitleText(
-              start: 30,
-              end: 25,
-              text: 'Developer ',
-              gradient: true),
-          mobile: AnimatedSubtitleText(
-              start: 25,
-              end: 20,
-              text: 'Developer ',
-              gradient: true),
-          tablet: AnimatedSubtitleText(
-              start: 40,
-              end: 30,
-              text: 'Developer ',
-              gradient: true),
-        )
+                desktop: AnimatedSubtitleText(
+                    start: 30,
+                    end: 40,
+                    text: 'Software Developer ',
+                    gradient: true),
+                largeMobile: AnimatedSubtitleText(
+                    start: 30,
+                    end: 25,
+                    text: 'Software Developer ',
+                    gradient: true),
+                mobile: AnimatedSubtitleText(
+                    start: 25,
+                    end: 20,
+                    text: 'Software Developer ',
+                    gradient: true),
+                tablet: AnimatedSubtitleText(
+                    start: 40,
+                    end: 30,
+                    text: 'Software Developer ',
+                    gradient: true),
+              )
             : ShaderMask(
-          shaderCallback: (bounds) {
-            return const LinearGradient(colors: [
-              Colors.pink,
-              Colors.blue,
-            ]).createShader(bounds);
-          },
-          child: const Responsive(
-            desktop: AnimatedSubtitleText(
-                start: 30,
-                end: 40,
-                text: 'Developer ',
-                gradient: false),
-            largeMobile: AnimatedSubtitleText(
-                start: 30,
-                end: 25,
-                text: 'Developer ',
-                gradient: false),
-            mobile: AnimatedSubtitleText(
-                start: 25,
-                end: 20,
-                text: 'Developer ',
-                gradient: true),
-            tablet: AnimatedSubtitleText(
-                start: 40,
-                end: 30,
-                text: 'Developer ',
-                gradient: false),
-          ),
-        ))
+                shaderCallback: (bounds) {
+                  return const LinearGradient(colors: [
+                    Colors.pink,
+                    Colors.blue,
+                  ]).createShader(bounds);
+                },
+                child: const Responsive(
+                  desktop: AnimatedSubtitleText(
+                      start: 30,
+                      end: 40,
+                      text: 'Software Developer ',
+                      gradient: false),
+                  largeMobile: AnimatedSubtitleText(
+                      start: 30,
+                      end: 25,
+                      text: 'Software Developer ',
+                      gradient: false),
+                  mobile: AnimatedSubtitleText(
+                      start: 25,
+                      end: 20,
+                      text: 'Software Developer ',
+                      gradient: true),
+                  tablet: AnimatedSubtitleText(
+                      start: 40,
+                      end: 30,
+                      text: 'Software Developer ',
+                      gradient: false),
+                ),
+              ))
       ],
     );
   }
